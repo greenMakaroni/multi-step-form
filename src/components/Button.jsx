@@ -7,13 +7,13 @@ const Button = ({step, setStep, num}) => {
           flex 
           justify-center 
           items-center 
-          w-[40px] 
-          h-[40px] 
+          w-[36px] 
+          h-[36px] 
           rounded-[50%]
           duration-300
           font-extrabold
           m-[5px]
-          border-2
+          border-[1px]
           ${step == num ? "bg-[#bfe2fd] text-[#02295a]" : "text-[#ffffff] hover:text-[white]  hover:bg-[#959eac] "}`
       }>
   

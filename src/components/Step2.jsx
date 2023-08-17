@@ -1,7 +1,7 @@
 
 const Step2 = () => {
   return (
-    <div>Step2</div>
+    <div className="text-[black]">Step2</div>
   )
 }
 

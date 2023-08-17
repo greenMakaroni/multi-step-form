@@ -1,7 +1,6 @@
-
 const Step1 = () => {
   return (
-    <div>Step1</div>
+    <div className="text-[black]">Step1</div>
   )
 }
 

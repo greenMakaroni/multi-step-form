@@ -3,7 +3,7 @@ import Form from "./components/Form"
 
 function App() {
   const { width } = useWindowDimensions()
-  const isDesktop = width > 375
+  const isDesktop = width > 1200
   return (
     <>
       <Form isDesktop={isDesktop} />
