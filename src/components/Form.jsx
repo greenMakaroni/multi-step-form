@@ -1,5 +1,9 @@
 import { useState } from "react"
 import Sidebar from "./Sidebar"
+import Step1 from "./Step1"
+import Step2 from "./Step2"
+import Step3 from "./Step3"
+import Step4 from "./Step4"
 
 const Form = ({ isDesktop }) => {
   const [step, setStep] = useState(1)
@@ -11,15 +15,15 @@ const Form = ({ isDesktop }) => {
         (() => {
           switch (step) {
             case 1:
-              return <p className="text-[black]">1</p>;
+              return <Step1 />;
             case 2:
-              return <p className="text-[black]">2</p>;
+              return <Step2 />;
             case 3:
-              return <p className="text-[black]">3</p>;
+              return <Step3 />;
             case 4:
-              return <p className="text-[black]">4</p>;
+              return <Step4 />;
             default:
-              return <p className="text-[black]"> Default </p>;
+              return <Step1 />;
           }
         })()
       }
