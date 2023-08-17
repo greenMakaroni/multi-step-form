@@ -12,7 +12,7 @@ const Button = ({step, setStep, num}) => {
           rounded-[50%]
           duration-300
           font-extrabold
-          m-[10px]
+          m-[5px]
           border-2
           ${step == num ? "bg-[#bfe2fd] text-[#02295a]" : "text-[#ffffff] hover:text-[white]  hover:bg-[#959eac] "}`
       }>
