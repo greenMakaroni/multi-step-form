@@ -7,15 +7,20 @@ import Step4 from "./Step4"
 
 const Form = ({ isDesktop }) => {
   const [step, setStep] = useState(1)
+  const [personalInfo, setPersonalInfo] = useState({
+    name: "",
+    email: "",
+    phone: ""
+  })
 
   return (
-    <div className={`${isDesktop ? "bg-[white] w-[60vw] h-[75vh] m-[0] py-[15px] px-[10px] rounded-xl flex flex-row" : "w-screen h-screen"}`}>
+    <div className={`${isDesktop ? "bg-[white] w-[70vw] h-[75vh] m-[0] py-[15px] px-[10px] rounded-2xl flex flex-row" : "w-screen h-screen"}`}>
       <Sidebar step={step} setStep={setStep} isDesktop={isDesktop} />
       {
         (() => {
           switch (step) {
             case 1:
-              return <Step1 />;
+              return <Step1 personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} />;
             case 2:
               return <Step2 />;
             case 3:

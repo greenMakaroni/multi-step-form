@@ -26,7 +26,7 @@ const Sidebar = ({ step, setStep, isDesktop }) => {
                     <div key={index} className={`flex flex-row m-[0] my-[10px] ${!isDesktop && "mx-[5px] mt-[-30px]"}`}>
                         <Button num={index + 1} step={step} setStep={setStep} />
                         {isDesktop &&
-                            <div className="ml-[10px] flex flex-col justify-center">
+                            <div className="leading-[20px] ml-[10px] flex flex-col justify-center">
                                 <h1 className=" text-[15px] text-[#adbeff] font-['Ubuntu'] font-[00]"> {s.title} </h1>
                                 <p className=" font-bold text-[15px] tracking-widest font-['Ubuntu'] font-[500]">{s.text}</p>
                             </div>}
