@@ -1,4 +1,4 @@
-const Step1 = ({ personalInfo, setPersonalInfo }) => {
+const Step1 = ({ personalInfo, setPersonalInfo, setStep }) => {
   function handleSubmit(e) {
     // Prevent the browser from reloading the page
     e.preventDefault();
@@ -9,6 +9,7 @@ const Step1 = ({ personalInfo, setPersonalInfo }) => {
     // convert to json
     const formJson = Object.fromEntries(formData.entries());
     console.log(formJson);
+    setStep(2)
   }
   return (
     <div className="text-[black] w-[70%] flex flex-col px-[5vw] py-[2vh] h-[100%]">
@@ -16,7 +17,6 @@ const Step1 = ({ personalInfo, setPersonalInfo }) => {
       <p className="mb-[5vh] font-['Ubuntu'] text-[16px] font-[300] text-[#9699ab]"> Please provide your name, email address, and phone number.</p>
 
       <form className="h-[80%] flex flex-col justify-between" onSubmit={handleSubmit}>
-
         <div className="flex flex-col">
           <label className="text-[#02295a] mb-[5px] font-['Ubuntu'] font-[300]" htmlFor="name">Name</label>
           <input

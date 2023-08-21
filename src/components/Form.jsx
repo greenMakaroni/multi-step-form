@@ -20,9 +20,9 @@ const Form = ({ isDesktop }) => {
         (() => {
           switch (step) {
             case 1:
-              return <Step1 personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} />;
+              return <Step1 personalInfo={personalInfo} setPersonalInfo={setPersonalInfo} setStep={setStep} />;
             case 2:
-              return <Step2 />;
+              return <Step2 setStep={setStep} />;
             case 3:
               return <Step3 />;
             case 4:
