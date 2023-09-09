@@ -1,4 +1,5 @@
 import Plan from "./Plan"
+import { useState } from "react"
 
 const plans = [
   {
@@ -19,6 +20,9 @@ const plans = [
 ]
 
 const Step2 = ({ setStep }) => {
+
+  const [select, setSelect] = useState("")
+
   return (
     <div className="text-[black] border-2 border-red-400 w-[70%] flex flex-col px-[5vw] py-[2vh] h-[100%]">
       <h1 className="font-['Ubuntu'] text-[#02295a] text-[2rem] font-bold"> Select your plan </h1>
@@ -27,7 +31,7 @@ const Step2 = ({ setStep }) => {
       <div className="flex flex-row justify-between w-[100%] h-[35%] mb-[4vh]">
         {plans.map((plan, index) => {
           return(
-            <Plan key={index} image={plan.image} title={plan.title} price={plan.price} />
+            <Plan key={index} image={plan.image} title={plan.title} price={plan.price} select={select} setSelect={setSelect}/>
           )
         })}
       </div>

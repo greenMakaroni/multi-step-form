@@ -1,7 +1,10 @@
 
-const Plan = ({ image, title, price }) => {
+const Plan = ({ image, title, price, select, setSelect }) => {
+
+  const isSelected = title == select
+
   return (
-    <div className={`hover:border-[#02295a] flex flex-col border-2 justify-between w-[30%] rounded-2xl p-[10px]`}>
+    <div onClick={() => setSelect(title)} className={`${isSelected && "border-[#02295a] bg-[#bfe2fd]"} hover:border-[#02295a] flex flex-col border-2 justify-between w-[30%] rounded-2xl p-[20px]`}>
         <img className="w-[45px]" src={image} alt={`${title} plan icon`} />
         <div className="flex flex-col">
             <h1 className="font-['Ubuntu'] text-[#02295a] text-[1rem] font-bold">{title}</h1>
