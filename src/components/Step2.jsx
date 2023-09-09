@@ -1,4 +1,6 @@
 import Plan from "./Plan"
+import Switch from "./Switch"
+
 import { useState } from "react"
 
 const plans = [
@@ -22,6 +24,7 @@ const plans = [
 const Step2 = ({ setStep }) => {
 
   const [select, setSelect] = useState("")
+  const [s, setSwitch] = useState("Monthly")
 
   return (
     <div className="text-[black] border-2 border-red-400 w-[70%] flex flex-col px-[5vw] py-[2vh] h-[100%]">
@@ -35,7 +38,7 @@ const Step2 = ({ setStep }) => {
           )
         })}
       </div>
-
+      <Switch s={s} setSwitch={setSwitch}/>
       <div className="flex flex-row justify-between ">
         <button onClick={() => setStep(1)} className="bg-[white] self-end text-[#02295a] font-[500] tracking-wider rounded-lg w-[150px] px-[20px] py-[15px]" >Go Back</button>
         <button onClick={() => setStep(3)} className="bg-[#02295a] self-end text-[white] font-[500] tracking-wider rounded-lg w-[150px] px-[20px] py-[15px]" >Next Step</button>
