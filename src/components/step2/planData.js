@@ -19,4 +19,4 @@ const plans = [
     },
   ]
 
-  export { plans }
+  export default plans

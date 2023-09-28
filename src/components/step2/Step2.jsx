@@ -1,11 +1,8 @@
 import Plan from "./Plan"
 import Switch from "./Switch"
-import { plans } from "./data.js"
-import { useState } from "react"
+import plans from "./planData.js"
 
 const Step2 = ({ setStep, s, select, setSelect, setSwitch }) => {
-
-
   return (
     <div className="text-[black] w-[70%] flex flex-col px-[5vw] py-[2vh] h-[100%]">
       <h1 className="font-['Ubuntu'] text-[#02295a] text-[2rem] font-bold"> Select your plan </h1>
