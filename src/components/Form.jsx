@@ -32,7 +32,7 @@ const Form = ({ isDesktop }) => {
             case 2:
               return <Step2 setStep={setStep} s={s} select={select} setSelect={setSelect} setSwitch={setSwitch} />;
             case 3:
-              return <Step3 />;
+              return <Step3 setStep={setStep} s={s} />;
             case 4:
               return <Step4 />;
             default:
