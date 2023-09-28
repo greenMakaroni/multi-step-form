@@ -9,6 +9,8 @@ const Plan = ({ plan, select, setSelect, s }) => {
         <div className="flex flex-col">
             <h1 className="font-['Ubuntu'] text-[#02295a] text-[1rem] font-bold">{plan.title}</h1>
             <p className="font-['Ubuntu'] text-[16px] font-[300] text-[#9699ab]">{ s == "Monthly" ? plan.monthlyPrice : plan.yearlyPrice }</p>
+       {s == "Yearly" &&  <p className="font-['Ubuntu'] text-[16px] font-[300] text-[#02295a]"> 2 months free </p>
+}
         </div>
     </div>
   )
