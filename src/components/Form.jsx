@@ -19,6 +19,7 @@ const Form = ({ isDesktop }) => {
   const [s, setSwitch] = useState("Monthly")
 
   // Step 3 state
+  
 
   return (
     <div className={`${isDesktop ? "bg-[white] w-[70vw] h-[75vh] m-[0] py-[15px] px-[10px] rounded-2xl flex flex-row" : "w-screen h-screen"}`}>
