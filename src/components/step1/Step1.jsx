@@ -8,7 +8,7 @@ const Step1 = ({ personalInfo, setPersonalInfo, setStep }) => {
 
     // convert to json
     const formJson = Object.fromEntries(formData.entries());
-    console.log(formJson);
+    setPersonalInfo(formJson)
     setStep(2)
   }
   return (

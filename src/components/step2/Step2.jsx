@@ -24,13 +24,11 @@ const plans = [
   },
 ]
 
-const Step2 = ({ setStep }) => {
+const Step2 = ({ setStep, s, select, setSelect, setSwitch }) => {
 
-  const [select, setSelect] = useState("")
-  const [s, setSwitch] = useState("Monthly")
 
   return (
-    <div className="text-[black] border-2 border-red-400 w-[70%] flex flex-col px-[5vw] py-[2vh] h-[100%]">
+    <div className="text-[black] w-[70%] flex flex-col px-[5vw] py-[2vh] h-[100%]">
       <h1 className="font-['Ubuntu'] text-[#02295a] text-[2rem] font-bold"> Select your plan </h1>
       <p className="mb-[5vh] font-['Ubuntu'] text-[16px] font-[300] text-[#9699ab]"> You have the option of monthly or yearly billing.</p>
       
