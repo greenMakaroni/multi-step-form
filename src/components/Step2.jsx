@@ -7,17 +7,20 @@ const plans = [
   {
     image: "./icon-arcade.svg",
     title: "Arcade",
-    price: "$9/mo",
+    monthlyPrice: "$9/mo",
+    yearlyPrice: "$90/yr",
   },
   {
     image: "./icon-advanced.svg",
     title: "Advanced",
-    price: "$12/mo",
+    monthlyPrice: "$12/mo",
+    yearlyPrice: "$120/yr",
   },
   {
     image: "./icon-pro.svg",
     title: "Pro",
-    price: "$15/mo",
+    monthlyPrice: "$15/mo",
+    yearlyPrice: "$150/yr",
   },
 ]
 
@@ -34,7 +37,7 @@ const Step2 = ({ setStep }) => {
       <div className="flex flex-row justify-between w-[100%] h-[35%] mb-[4vh]">
         {plans.map((plan, index) => {
           return(
-            <Plan key={index} image={plan.image} title={plan.title} price={plan.price} select={select} setSelect={setSelect}/>
+            <Plan key={index} plan={plan} select={select} setSelect={setSelect} s={s}/>
           )
         })}
       </div>
